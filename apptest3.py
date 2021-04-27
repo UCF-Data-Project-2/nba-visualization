@@ -1,7 +1,7 @@
 from contextlib import contextmanager
 import sqlite3
 from sqlite3 import Error
-from flask import Flask, render_template, redirect, jsonify, request
+from flask import Flask, render_template, redirect, jsonify, request,  send_from_directory
 
 
 #------------------------------------------------------------#
@@ -78,12 +78,16 @@ app = Flask(__name__)
 
 
 #------------------------------------------------------------#
-# Route to render index.html template
+# Route to render index.html
 #------------------------------------------------------------#
 
 @app.route("/")
 def home():
-    return jsonify(read_all_data())
+    return app.send_static_file('index.html')
+
+#------------------------------------------------------------#
+#Establish routes
+#------------------------------------------------------------#
 
 @app.route("/api")
 def api():
@@ -96,6 +100,12 @@ def api():
             return jsonify(get_all_data_by_year(year))
         except ValueError:
             pass
+
+
+@app.route("/api/all")
+def all_data():
+    return jsonify(read_all_data())
+
 
 if __name__ == "__main__":
     app.run(debug=True)

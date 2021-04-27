@@ -1,73 +1,73 @@
-from contextlib import contextmanager
-import sqlite3
+from flask import Flask, render_template, redirect
+import requests
+import json
+import sqlite3 as sql
 from sqlite3 import Error
 import pandas as pd
+from datetime import datetime
 
-DB_FILE = r"nba_test.db"
+# Create an instance of Flask
+app = Flask(__name__)
 
 
-@contextmanager
-def connection():
+
+
+# Route to render index.html template using data from Sqlite
+@app.route("/")
+def getResults():
+    results = getPoints()
+
+    xAxis = results[1]
+    yAxis = results[0]
+
+    return render_template("index.html", xAxis=xAxis, yAxis=yAxis)
+
+def getPoints():
+
     """ create a database connection to a SQLite database """
     conn = None
     try:
-        yield sqlite3.connect(DB_FILE)
+        with sql.connect("nba_test") as conn:
+            c = conn.cursor()
+            # query total points per year for Kobe
+            kb_points = c.execute('''SELECT ROW_NUMBER() OVER (
+                ORDER BY strftime('%Y', [game.date])
+                )row_num,
+                strftime('%Y', [game.date]) as Year, SUM(pts) 
+                FROM kobe 
+                WHERE pts IS NOT NULL 
+                GROUP BY Year''').fetchall()
+            lj_points = c.execute('''SELECT ROW_NUMBER() OVER (
+                ORDER BY strftime('%Y', [game.date])
+                )row_num,
+                strftime('%Y', [game.date]) as Year, SUM(pts) 
+                FROM kobe 
+                WHERE pts IS NOT NULL 
+                GROUP BY Year''').fetchall()    
+            
+            # Declare vars
+            pList = []
+            yList = []
+
+            #iterate through ist and ush values into a list
+            for i in kb_points:
+                pList.append(int(i[1]))
+                yList.append(int(i[0]))
+            
+            yAxis = [pList]
+            xAxis = [yList]
+            results = []    
+            results.extend((yAxis, xAxis))
     except Error as e:
         print(e)
     finally:
         if conn:
             conn.close()
 
-
-def populate_data():
-    with connection() as conn:
-        c = conn.cursor()
-        print(sqlite3.version)
-        c.execute(
-            '''CREATE TABLE players (PLAYER_NAME text, TEAM_ID text, PLAYER_ID text, SEASON int)''')
-        players = pd.read_csv('players.csv')
-        players.to_sql('players', conn, if_exists='append', index=False)
+    # Return template and data
+    return (results)
 
 
-def read_all_data():
-    with connection() as conn:
-        cur = conn.cursor()
-        cur.execute("SELECT * FROM players")
 
-        data = []
-        for row in cur.fetchall():
-            data.append(
-                {
-                    "name": row[0],
-                    "team_id": row[1],
-                    "player_id": row[2],
-                    "season": row[3]
-                }
-            )
-
-        return data
-
-
-def get_all_data_by_year(year: int):
-    with connection() as conn:
-        cur = conn.cursor()
-        cur.execute(f"SELECT * FROM players WHERE SEASON = {year} ")
-
-        data = []
-        for row in cur.fetchall():
-            data.append(
-                {
-                    "name": row[0],
-                    "team_id": row[1],
-                    "player_id": row[2],
-                    "season": row[3]
-                }
-            )
-
-        return data
-
-
-if __name__ == '__main__':
-    create_connection(r"nba_test.db")
-    print(len(read_all_data()))
-    print(len(get_all_data_by_year(2019)))
+if __name__ == "__main__":
+    app.run(debug=True)
