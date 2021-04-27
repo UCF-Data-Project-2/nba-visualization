@@ -78,7 +78,7 @@ app = Flask(__name__)
 
 
 #------------------------------------------------------------#
-# Route to render index.html template using data from Mongo
+# Route to render index.html template
 #------------------------------------------------------------#
 
 @app.route("/")
@@ -88,8 +88,6 @@ def home():
 @app.route("/api")
 def api():
     year = request.args.get('year')
-    something = request.args.get("purple")
-    print(something)
     if year:
         try:
             year = int(year)
