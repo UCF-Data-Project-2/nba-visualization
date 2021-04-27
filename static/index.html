@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NBA Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1><strong>KOBE VS LEBRON</strong></h1>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row box">
+          <div class="col-2" id="input">
+            <p>Search by:</p>
+              <select id="selDataset" onchange="optionChanged(this.value)"></select>
+              <!-- Add dropdown element here -->
+          </div>
+          <div class="col-9" id="responsive-chart">
+            <img class="chart" src="Images/line_chart.PNG"/>
+            <!-- Add chart responsive to dropdown element here -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Row of buttons for changing line chart-->
+    </div>
+    <div class="row">
+      <div class="col-5 box" id="static-chart1">
+        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <!-- Add chart here -->
+      </div>
+      <div class="col-5 box" id="static-chart2">
+        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <!-- Add chart here -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-5 box" id="static-chart1">
+        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <!-- Add chart here -->
+      </div>
+      <div class="col-5 box" id="static-chart2">
+        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <!-- Add chart here -->
+      </div>
+  </div>
+
+  <!-- <footer class="footer fixed-bottom">
+    <div class="container">
+        <span class="foot-text">Footer</span>
+    </div>
+  </footer>  -->
+  
+    <!-- D3 -->  
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/plots.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
