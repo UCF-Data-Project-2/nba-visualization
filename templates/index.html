@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NBA Dashboard</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
@@ -15,50 +15,61 @@
     <div class="row">
       <h1><strong>KOBE VS LEBRON</strong></h1>
     </div>
+    <div class=row>
+    <p class="main-text"><strong>Kobe Bryant and LeBron James are both considered NBA legends.</strong>They were both drafted out of high school and went on to win numerous championships 
+      for their respective teams. But did one live up to the high expectations placed on him more than the other? Below, you can see data on the two players' first 18 
+      years in the NBA. Compare the two players' overall stats per year and decide for yourself who is the stronger player.
+    </p>
+  </div>
     <div class="row">
       <div class="col-12">
         <div class="row box">
           <div class="col-2" id="input">
-            <p>Search by:</p>
+            <p class="search-text">Search by:</p>
               <select id="selDataset" onchange="optionChanged(this.value)"></select>
               <!-- Add dropdown element here -->
+            <p style="margin-top: 10px;">Choose a selection from the dropdown menu to compare the first 18 years of the players' career stats.</p>
           </div>
-          <div class="col-9" id="responsive-chart">
-            <img class="chart" src="Images/line_chart.PNG"/>
+          <div class="col-10" id="responsive-chart">
+            <img class="chart" src="../static/Images/line_chart.PNG"/>
             <!-- Add chart responsive to dropdown element here -->
           </div>
         </div>
       </div>
     </div>
     <div class="row">
-      <!-- Row of buttons for changing line chart-->
+      <h2><strong>18-year Totals at a Glance</strong></h2>
     </div>
     <div class="row">
       <div class="col-5 box" id="static-chart1">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <h4>Total Points</h4>
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
       <div class="col-5 box" id="static-chart2">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <h4>Total Blocks</h4>
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
     </div>
-    <div class="row">
-      <div class="col-5 box" id="static-chart1">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+    <div class="row" style="margin-top:10px;">
+      <div class="col-5 box" id="static-chart3">
+        <h4>Total Assists</h4>
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
-      <div class="col-5 box" id="static-chart2">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+      <div class="col-5 box" id="static-chart4">
+        <h4>Total Wins</h4>
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
   </div>
 
-  <!-- <footer class="footer fixed-bottom">
+  <footer class="footer fixed-bottom">
     <div class="container">
-        <span class="foot-text">Footer</span>
+        <span class="foot-text">Visualizations by: <br> Ian Castro | Stephanie Rivas | Howard Mayorga | Kim Sommer</span>
     </div>
-  </footer>  -->
+  </footer> 
   
     <!-- D3 -->  
     <script src="https://d3js.org/d3.v5.min.js"></script>

@@ -3,14 +3,15 @@ html {
 }
 
 body {
-    padding-top: 11rem;
+    align-items: center;
+    padding-top: 9rem;
     padding-bottom: 4rem;
     padding-right: 0;
     padding-left: 0;
     margin: 0;
     font-family: Montserrat, sans-serif;
     line-height: 150%;
-    background: url(nba-background-small.jpg) no-repeat center top fixed; 
+    background: url(../../static/Images/nba-background-small.jpg) no-repeat center top fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -18,9 +19,35 @@ body {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 6em;
     color: white;
     filter: drop-shadow(2px 2px 1px black)
+}
+
+h2 {
+    font-size: 3em;
+    color: white;
+    filter: drop-shadow(1px 1px 1px black)
+}
+
+.main-text {
+    line-height: 150%;
+    text-align: justify;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+    filter: drop-shadow(1px 1px 1px black)
+}
+
+.search-text {
+    font-weight:600;
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    padding: 0px;
+    margin-right: 0px;
 }
 
 .row {
@@ -40,20 +67,26 @@ h1 {
 .box {
     background-color: #fefefe;
     border-radius: 3px;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+button {
+    /* width: 100px; */
+    margin-right: 1em;
 }
 
 .footer { 
-    position: absolute;
+    margin-top: 2rem;
+    position:relative;
     bottom: 0;
     width: 100%;
-    background-color: #fefefe;
-    opacity: .5;
-    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* background-color: #fefefe;
+    opacity: .5; */
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fefefe;
-    text-align: justify;
-    text-justify:auto;
+    text-align: center;
+    /* text-justify:auto; */
 }
