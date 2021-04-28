@@ -83,7 +83,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return app.send_static_file('index.html')
+    return render_template('index.html')
 
 #------------------------------------------------------------#
 #Establish routes
