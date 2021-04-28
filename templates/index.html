@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NBA Dashboard</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -22,11 +22,17 @@
             <p>Search by:</p>
               <select id="selDataset" onchange="optionChanged(this.value)"></select>
               <!-- Add dropdown element here -->
+              <button>Points Scored</button>
+              <button>Blocks</button>
+              <button>Assists</button>
           </div>
           <div class="col-9" id="responsive-chart">
-            <img class="chart" src="Images/line_chart.PNG"/>
+            <img class="chart" src="line_chart.PNG"/>
             <!-- Add chart responsive to dropdown element here -->
           </div>
+          <button>Points Scored</button>
+          <button>Blocks</button>
+          <button>Assists</button>
         </div>
       </div>
     </div>
@@ -35,30 +41,30 @@
     </div>
     <div class="row">
       <div class="col-5 box" id="static-chart1">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
       <div class="col-5 box" id="static-chart2">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <img class="bar-chart" src="bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
     </div>
     <div class="row">
       <div class="col-5 box" id="static-chart1">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <img class="bar-chart" src="bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
       <div class="col-5 box" id="static-chart2">
-        <img class="bar-chart" src="Images/bar_chart.PNG"/>
+        <img class="bar-chart" src="bar_chart.PNG"/>
         <!-- Add chart here -->
       </div>
   </div>
 
-  <!-- <footer class="footer fixed-bottom">
+  <footer class="footer fixed-bottom">
     <div class="container">
-        <span class="foot-text">Footer</span>
+        <span class="foot-text">Visualizations by: <br> Ian Castro | Stephanie Rivas | Howard Mayorga | Kim Sommer</span>
     </div>
-  </footer>  -->
+  </footer> 
   
     <!-- D3 -->  
     <script src="https://d3js.org/d3.v5.min.js"></script>

@@ -45,15 +45,21 @@ h1 {
     margin-right: 10px;
 }
 
+button {
+    /* width: 100px; */
+    margin-right: 1em;
+}
+
 .footer { 
-    position: absolute;
+    margin-top: 2rem;
+    position:relative;
     bottom: 0;
     width: 100%;
-    background-color: #fefefe;
-    opacity: .5;
-    font-size: 100px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* background-color: #fefefe;
+    opacity: .5; */
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fefefe;
-    text-align: justify;
-    text-justify:auto;
+    text-align: center;
+    /* text-justify:auto; */
 }
