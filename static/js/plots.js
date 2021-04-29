@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // // function init() {
 //   // d3.json("../../data/kobe_data.json").then(data => {
 //   //     console.log(data);
@@ -45,3 +46,34 @@
 // fig = go.Figure(data=[trace], layout=layout)
 // py.iplot(fig, filename='kobe_data')
 
+=======
+var trace1 = {
+    x: kb_year_index,
+    y: data.kobe.kb_pts_yr,
+    name: "Kobe",
+    mode: 'lines+markers',
+    type: 'scatter'
+  };
+var trace2 = {
+  x: data.lebron.Plotlylj_year_index,
+  y: data.lebron.lj_pts_yr,
+  name: 'Lebron',
+  mode: 'lines+markers',
+  type: 'scatter'
+  };
+// var trace3 = {
+//   x: [1, 2, 3, 4],
+//   y: [12, 9, 15, 12],
+//   mode: 'lines+markers',
+//   type: 'scatter'
+//   };
+var layout = {
+  title: "Kobe vs Lebron - Points",
+  yaxis: { title: "Points"},
+  xaxis: { title: "Year Index"}
+  };
+  
+var data = [trace1, trace2;
+console.log(data.kobe.kb_pts_yr)
+Plotly.newPlot('myDiv', data);
+>>>>>>> d9769a4faffec7b94882ee5ca1333e7508d5ddde

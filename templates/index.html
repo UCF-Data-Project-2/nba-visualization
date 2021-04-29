@@ -8,6 +8,7 @@
   <title>NBA Dashboard</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../static/css/style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body>
@@ -45,6 +46,17 @@
         <h4>Total Points</h4>
         <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
+        <div id='myDiv'></div>
+        <script type="text/javascript" src="../static/js/plots.js"></script>
+        <script>
+          var data = {};
+          data = {{data|safe}};
+          // var data = [];
+          // var yAxis = [];
+          // xAxis = {{xAxis|safe}};
+          // yAxis = {{yAxis|safe}};
+          // console.log(xAxis, yAxis);
+        </script>
       </div>
       <div class="col-5 box" id="static-chart2">
         <h4>Total Blocks</h4>
@@ -74,7 +86,7 @@
     <!-- D3 -->  
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/plots.js"></script>
+    <script type="text/javascript" src="../static/js/plots.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
