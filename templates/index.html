@@ -44,13 +44,14 @@
     <div class="row">
       <div class="col-5 box" id="static-chart1">
         <h4>Total Points</h4>
-        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
+        <!-- <img class="bar-chart" src="../static/Images/bar_chart.PNG"/> -->
         <!-- Add chart here -->
         <div id='myDiv'></div>
         <script type="text/javascript" src="../static/js/plots.js"></script>
         <script>
           var data = {};
           data = {{data|safe}};
+          console.log(data);
           // var data = [];
           // var yAxis = [];
           // xAxis = {{xAxis|safe}};
