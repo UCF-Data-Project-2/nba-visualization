@@ -1,7 +1,7 @@
 var trace1 = {
     x: kb_year_index,
     y: data.kobe.kb_pts_yr,
-    name: "Kobe"
+    name: "Kobe",
     mode: 'lines+markers',
     type: 'scatter'
   };
