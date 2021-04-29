@@ -1,6 +1,6 @@
 // Function to format metadata for panel
 function init() {
-    d3.json("http://localhost:5000/api/all").then(data => {
+    d3.json("api/all").then(data => {
         console.log(data);
 
     // Getting id from dropdown
