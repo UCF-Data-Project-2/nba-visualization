@@ -1,9 +1,9 @@
 var trace1 = {
-    x: kb_year_index,
-    y: data.kobe.kb_pts_yr,
-    name: "Kobe"
-    mode: 'lines+markers',
-    type: 'scatter'
+  x: data.kobe.kb_year_index,
+  y: data.kobe.kb_pts_yr,
+  name: "Kobe",
+  mode: 'lines+markers',
+  type: 'scatter'
   };
 var trace2 = {
   x: data.lebron.Plotlylj_year_index,
@@ -24,6 +24,8 @@ var layout = {
   xaxis: { title: "Year Index"}
   };
   
-var data = [trace1, trace2;
+var data = [trace1, trace2];
+
 console.log(data.kobe.kb_pts_yr)
+
 Plotly.newPlot('myDiv', data);
