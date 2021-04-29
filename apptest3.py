@@ -148,6 +148,21 @@ def read_all_data():
             lj_blk.append(int(i[8])) #8
             lj_dreb.append(int(i[9])) #9
             lj_stl.append(int(i[10])) #10
+        
+        data = {
+            'kobe': {
+                'index_year': kb_year_index, 'pts_year': kb_pts_yr, 'ast_year': kb_ast_yr,
+                'reb_year': kb_reb_yr, 'blk_year': kb_blk_yr, 'dreb_year': kb_dreb_yr, 'stl_year': kb_stl_yr,
+                'year': kb_year, 'date': kb_date, 'points': kb_pts, 'assists': kb_ast, 'rebounds': kb_reb,
+                'blocks': kb_blk, 'def_rebounds': kb_dreb, 'steals': kb_stl
+            },
+            'lebron': {
+                'index_year': lj_year_index, 'pts_year': lj_pts_yr, 'ast_year': lj_ast_yr,
+                'reb_year': lj_reb_yr, 'blk_year': lj_blk_yr, 'dreb_year': lj_dreb_yr, 'stl_year': lj_stl_yr,
+                'year': lj_year, 'date': lj_date, 'points': lj_pts, 'assists': lj_ast, 'rebounds': lj_reb,
+                'blocks': lj_blk, 'def_rebounds': lj_dreb, 'steals': lj_stl
+            }
+        }
         # Kim's original code
         # data = []
         # for row in c.fetchall():
