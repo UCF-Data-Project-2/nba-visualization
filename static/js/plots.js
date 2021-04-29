@@ -1,9 +1,17 @@
 var trace1 = {
+<<<<<<< HEAD
   x: data.kobe.kb_year_index,
   y: data.kobe.kb_pts_yr,
   name: "Kobe",
   mode: 'lines+markers',
   type: 'scatter'
+=======
+    x: kb_year_index,
+    y: data.kobe.kb_pts_yr,
+    name: "Kobe",
+    mode: 'lines+markers',
+    type: 'scatter'
+>>>>>>> cb53a816777b55c8dd84677bbfe781927361d55e
   };
 var trace2 = {
   x: data.lebron.Plotlylj_year_index,
