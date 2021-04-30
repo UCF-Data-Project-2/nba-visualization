@@ -32,8 +32,9 @@
             <p style="margin-top: 10px;">Choose a selection from the dropdown menu to compare the first 18 years of the players' career stats.</p>
           </div>
           <div class="col-10" id="responsive-chart">
-            <img class="chart" src="../static/Images/line_chart.PNG"/>
+            <!-- <img class="chart" src="../static/Images/line_chart.PNG"/> -->
             <!-- Add chart responsive to dropdown element here -->
+            <div id='interactive'></div>
           </div>
         </div>
       </div>
@@ -44,9 +45,9 @@
     <div class="row">
       <div class="col-5 box" id="static-chart1">
         <h4>Total Points</h4>
-        <!-- <img class="bar-chart" src="../static/Images/bar_chart.PNG"/> -->
+        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
         <!-- Add chart here -->
-        <div id='myDiv'></div>
+        <div id='points'></div>
         <script type="text/javascript" src="../static/js/plots.js"></script>
         <script>
           var data = {};
