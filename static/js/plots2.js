@@ -1,16 +1,18 @@
 // Function to format metadata for panel
+dropdown = ["Points", "Assists", "Rebounds", "Blocks", "Defensive Rebounds", "Steals"]
+
 function init() {
     d3.json("api/all").then(data => {
         console.log(data);
 
     // Getting id from dropdown
     let input = d3.select("#input");
-    data.kobe.forEach(element => {
+    dropdown.forEach(element => {
         input.append("option").attr("value", element).text(element)
     });    
 
     // Call updatePlots function to build plots
-    updatePlots(data, input);
+    updatePlots(data, "Points");
     });
 };
 
@@ -19,106 +21,72 @@ updatePlots = (data, input) => {
     console.log(data)
     console.log(input)
 
-//     let sample = data.samples.filter(sample => sample.id === id);
-//     let metadata = data.metadata.filter(metadatum => metadatum.id === +id);
+    // Determine y axis values
+    if (input == "Points") {
+        yKobe = data.kobe.pts_year
+        yLeBron = data.lebron.pts_year
+    }
+    else if (input == "Assists") {
+        yKobe = data.kobe.ast_year
+        yLeBron = data.lebron.ast_year
+    }
+    else if (input == "Rebounds") {
+        yKobe = data.kobe.reb_year
+        yLeBron = data.lebron.reb_year
+    }
+    else if (input == "Blocks") {
+        yKobe = data.kobe.blk_year
+        yLeBron = data.lebron.blk_year
+    }
+    else if (input == "Defensive Rebounds") {
+        yKobe = data.kobe.dreb_year
+        yLeBron = data.lebron.dreb_year
+    }
+    else {
+        yKobe = data.kobe.stl_year
+        yLeBron = data.lebron.stl_year
+    }
 
-//     console.log(sample);
+    console.log(yKobe);
+    console.log(yLeBron);
+ 
+    // Build responsive chart
+    var trace1 = {
+        x: data.kobe.index_year,
+        y: yKobe,
+        name: "Kobe",
+        mode: 'lines+markers',
+        type: 'scatter'
+        };
+    var trace2 = {
+        x: data.kobe.index_year,
+        y: yLeBron,
+        name: 'Lebron',
+        mode: 'lines+markers',
+        type: 'scatter'
+        };
 
-//     //Populate demographic info
-//     d3.select("#sample-metadata").html("");
-//     d3.select("#sample-metadata").html(make_meta(metadata));
+    var layout = {
+        title: `Kobe vs Lebron - ${input}`,
+        yaxis: { title: input},
+        xaxis: { title: "Year Index"}
+        };
 
-//     // X & Y variables for charts
-//     let otuID = sample[0].otu_ids;
-//     let sampleVal = sample[0].sample_values;
-//     let otuLabel = sample[0].otu_labels;
-
-//     console.log(otuID);
-//     console.log(sampleVal);
-
-//     xy = otuID.map((val, i) => ({
-//         otuID: val,
-//         sampleVal: sampleVal[i],
-//         otuLabel: otuLabel[i],
-//         }));
-
-//     xy.sort((a, b) => b - a);
-//     xy = (xy.slice(0, 10));
-    
-//     console.log(xy);
-
-//     x = [];
-//     y = [];
-//     labels = [];
-    
-//     for (let i = 0; i < xy.length; i ++) {
-//         x.push(xy[i].sampleVal);
-//         y.push(xy[i].otuID);
-//         labels.push(xy[i].otuLabel);
-//       };
-
-//     console.log(x);
-//     console.log(y);
-//     console.log(labels);
-
-//     // Build bar chart:
-//     let barData = [{
-//         x: x,
-//         y: y,
-//         type: 'bar',
-//         orientation: 'h',
-//         hovertext: labels,
-//         marker: {color: 'rgb(52, 192, 235)'},
-//         width: .8
-//     }];
-
-//     let barLayout = {
-//         title: `Top 10 OTUs for Test Subject ${id}`,
-//         yaxis: {
-//             autorange: "reversed",
-//             type: 'category',
-//             // ticktext: 'OTU ' + y,
-//             showticklabels: true,
-//         },
-//     };
-
-//     var barConfig = {responsive: true}
-
-//     // Plot bar chart
-//     Plotly.newPlot("bar", barData, barLayout, barConfig);
-
-//     // Build bubble chart:
-//     let bubbleData = [{
-//         x: y,
-//         y: x,
-//         mode: 'markers',
-//         marker: {
-//             color: y,
-//             size: x,
-//         }
-//     }];
-
-//     let bubbleLayout = {
-//         title: 'Bio Bubbles',
-//         xaxis: {
-//             title: {
-//                 text: "OTU IDs"
-//             }
-//         }
-//     };
-
-//     var bubbleConfig = {responsive: true}
-
-//     // Plot bubble chart
-//     Plotly.newPlot("bubble", bubbleData, bubbleLayout, bubbleConfig);
-// };
-
-// // Function for handling new ID input from dropdown
-// optionChanged = (id) => {
-//     d3.json("samples.json").then (data => {
-//         console.log(data);
-//         updatePlots(data, id);
-//     });
+    var config = {responsive: true}
+        
+    var chart1 = [trace1, trace2];
+      
+    console.log(data)
+      
+    Plotly.newPlot('responsive-chart', chart1, layout, config);
+      
+// Function for handling new ID input from dropdown
+optionChanged = (input) => {
+    d3.json("api/all").then (data => {
+        console.log(data);
+        updatePlots(data, input);
+    })
+    };
 };
 
 init();
