@@ -11,6 +11,32 @@ function init() {
         input.append("option").attr("value", element).text(element)
     });    
 
+    console.log(d3.sum(data.kobe.pts_year));
+
+
+    // Build static-chart1
+    var trace1 = {
+        x: 'Kobe Bryant',
+        y: [d3.sum(data.kobe.pts_year)],
+        name: "Kobe Bryant",
+        type: 'bar'
+    };
+
+    var trace2 = {
+        x: 'LeBron James',
+        y: [d3.sum(data.lebron.pts_year)],
+        name: "LeBron James",
+        type: 'bar'
+    };
+
+    var staticChart1 = [trace1, trace2];
+
+    var layout = {barmode: 'group'};
+
+    Plotly.newPlot('static-chart1', staticChart1, layout);
+
+    // Build static-chart2
+
     // Call updatePlots function to build plots
     updatePlots(data, "Points");
     });
