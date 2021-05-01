@@ -1,6 +1,10 @@
 // Function to format metadata for panel
 dropdown = ["Points", "Assists", "Rebounds", "Blocks", "Defensive Rebounds", "Steals"]
 
+function equalize(kobeArray) {
+    
+}
+
 function init() {
     d3.json("api/all").then(data => {
         console.log(data);
@@ -12,7 +16,6 @@ function init() {
     });    
 
     console.log(d3.sum(data.kobe.pts_year));
-
 
     // Build static-chart1
     var trace1 = {
