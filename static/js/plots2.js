@@ -5,19 +5,19 @@ function init() {
 
     // Getting id from dropdown
     let input = d3.select("#input");
-    data.name.forEach(element => {
+    data.kobe.forEach(element => {
         input.append("option").attr("value", element).text(element)
-    });
+    });    
 
     // Call updatePlots function to build plots
-    updatePlots(data, "Danny Green");
+    updatePlots(data, input);
     });
 };
 
 // Code to build plots
-updatePlots = (data, name) => {
+updatePlots = (data, input) => {
     console.log(data)
-    console.log(name)
+    console.log(input)
 
 //     let sample = data.samples.filter(sample => sample.id === id);
 //     let metadata = data.metadata.filter(metadatum => metadatum.id === +id);
