@@ -163,38 +163,9 @@ def read_all_data():
                 'blocks': lj_blk, 'def_rebounds': lj_dreb, 'steals': lj_stl
             }
         }
-        # Kim's original code
-        # data = []
-        # for row in c.fetchall():
-        #     data.append(
-        #         {
-        #             "name": row[0],
-        #             "team_id": row[1],
-        #             "player_id": row[2],
-        #             "season": row[3]
-        #         }
-        #     )
 
         return data
 
-# Gives us data with parameters for season year
-def get_all_data_by_year(year: int):
-    with connection() as conn:
-        c = conn.cursor()
-        c.execute(f"SELECT * FROM players WHERE SEASON = {year} ")
-
-        data = []
-        for row in c.fetchall():
-            data.append(
-                {
-                    "name": row[0],
-                    "team_id": row[1],
-                    "player_id": row[2],
-                    "season": row[3]
-                }
-            )
-
-        return data
 
 #------------------------------------------------------------#
 # Create an instance of Flask
