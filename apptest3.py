@@ -180,7 +180,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    results = read_all_data()
+    print(f'This should be my dictionary with all results {results}')
+    return render_template('index.html', data=results)
 
 #------------------------------------------------------------#
 #Establish routes

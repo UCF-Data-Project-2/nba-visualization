@@ -1,13 +1,13 @@
 var trace1 = {
-    x: kb_year_index,
-    y: data.kobe.kb_pts_yr,
-    name: "Kobe",
-    mode: 'lines+markers',
-    type: 'scatter'
+  x: data.kobe.index_year,
+  y: data.kobe.pts_year,
+  name: "Kobe",
+  mode: 'lines+markers',
+  type: 'scatter'
   };
 var trace2 = {
-  x: data.lebron.Plotlylj_year_index,
-  y: data.lebron.lj_pts_yr,
+  x: data.kobe.index_year,
+  y: data.lebron.pts_year,
   name: 'Lebron',
   mode: 'lines+markers',
   type: 'scatter'
@@ -24,6 +24,8 @@ var layout = {
   xaxis: { title: "Year Index"}
   };
   
-var data = [trace1, trace2;
-console.log(data.kobe.kb_pts_yr)
-Plotly.newPlot('myDiv', data);
+var chart1 = [trace1, trace2];
+
+console.log(data)
+
+Plotly.newPlot('interactive', chart1, layout);
