@@ -123,6 +123,27 @@ function init() {
 
     Plotly.newPlot('static-chart5', staticChart5, layout);
 
+    // Build static-chart6
+    var trace11 = {
+        x: 'Kobe Bryant',
+        y: [d3.sum(data.kobe.dreb_year)],
+        name: "Kobe Bryant",
+        type: 'bar'
+    };
+
+    var trace12 = {
+        x: 'LeBron James',
+        y: [d3.sum(data.lebron.dreb_year)],
+        name: "LeBron James",
+        type: 'bar'
+    };
+
+    var staticChart6 = [trace11, trace12];
+
+    var layout = {barmode: 'group'};
+
+    Plotly.newPlot('static-chart6', staticChart6, layout);
+
     // Call updatePlots function to build plots
     updatePlots(data, "Points");
     });
