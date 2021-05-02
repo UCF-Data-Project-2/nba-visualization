@@ -23,6 +23,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.pts_year.slice(0, 18))],
         name: "Kobe Bryant",
+        // marker: { color: 'rgb(66, 135, 245)' },
         type: 'bar'
     };
 
@@ -35,7 +36,15 @@ function init() {
 
     var staticChart1 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart1', staticChart1, layout);
 
@@ -56,7 +65,15 @@ function init() {
 
     var staticChart2 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart2', staticChart2, layout);
 
@@ -77,7 +94,15 @@ function init() {
 
     var staticChart3 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart3', staticChart3, layout);
     
@@ -98,7 +123,15 @@ function init() {
 
     var staticChart4 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart4', staticChart4, layout);
 
@@ -119,7 +152,15 @@ function init() {
 
     var staticChart5 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart5', staticChart5, layout);
 
@@ -140,7 +181,15 @@ function init() {
 
     var staticChart6 = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        barmode: 'group',
+        showlegend: true,
+        legend: {
+            x: 0,
+            y: -.2,
+            "orientation": "h"
+        }
+    };
 
     Plotly.newPlot('static-chart6', staticChart6, layout);
   
