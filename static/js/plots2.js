@@ -16,6 +16,7 @@ function init() {
     });    
 
     console.log(d3.sum(data.kobe.pts_year));
+    
 
     // Build static-chart1
     var trace1 = {
@@ -191,7 +192,7 @@ function init() {
     };
 
     Plotly.newPlot('static-chart6', staticChart6, layout);
-    
+  
 
 
     // Call updatePlots function to build plots
@@ -262,6 +263,7 @@ updatePlots = (data, input) => {
     console.log(data)
       
     Plotly.newPlot('responsive-chart', chart1, layout, config);
+
       
 // Function for handling new ID input from dropdown
 optionChanged = (input) => {
