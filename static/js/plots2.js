@@ -21,11 +21,7 @@ function init() {
     // Build static-chart1
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.pts_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.pts_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         // marker: { color: 'rgb(66, 135, 245)' },
         type: 'bar'
@@ -55,11 +51,7 @@ function init() {
     // Build static-chart2
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.blk_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.ast_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -88,11 +80,7 @@ function init() {
     // Build static-chart3
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.ast_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.reb_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -121,11 +109,7 @@ function init() {
     // Build static-chart4
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.reb_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.blk_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -154,11 +138,7 @@ function init() {
     // Build static-chart5
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.stl_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.dreb_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -187,11 +167,7 @@ function init() {
     // Build static-chart6
     var trace1 = {
         x: 'Kobe Bryant',
-<<<<<<< HEAD
-        y: [d3.sum(data.kobe.dreb_year.slice(1,20))],
-=======
         y: [d3.sum(data.kobe.stl_year.slice(0, 18))],
->>>>>>> ebc195643e0f13e8c5ac86e77dbc22fe197b30ea
         name: "Kobe Bryant",
         type: 'bar'
     };
