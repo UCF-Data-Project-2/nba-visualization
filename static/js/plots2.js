@@ -82,25 +82,46 @@ function init() {
     Plotly.newPlot('static-chart3', staticChart3, layout);
 
     // Build static-chart4
-    var trace3 = {
+    var trace7 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.ast_year)],
+        y: [d3.sum(data.kobe.reb_year)],
         name: "Kobe Bryant",
         type: 'bar'
     };
 
-    var trace4 = {
+    var trace8 = {
         x: 'LeBron James',
-        y: [d3.sum(data.lebron.ast_year)],
+        y: [d3.sum(data.lebron.reb_year)],
         name: "LeBron James",
         type: 'bar'
     };
 
-    var staticChart4 = [trace3, trace4];
+    var staticChart4 = [trace7, trace8];
 
-    var layout4 = {barmode: 'group'};
+    var layout = {barmode: 'group'};
 
-    Plotly.newPlot('static-chart4', staticChart4, layout4);
+    Plotly.newPlot('static-chart4', staticChart4, layout);
+
+    // Build static-chart5
+    var trace9 = {
+        x: 'Kobe Bryant',
+        y: [d3.sum(data.kobe.stl_year)],
+        name: "Kobe Bryant",
+        type: 'bar'
+    };
+
+    var trace10 = {
+        x: 'LeBron James',
+        y: [d3.sum(data.lebron.stl_year)],
+        name: "LeBron James",
+        type: 'bar'
+    };
+
+    var staticChart5 = [trace9, trace10];
+
+    var layout = {barmode: 'group'};
+
+    Plotly.newPlot('static-chart5', staticChart5, layout);
 
     // Call updatePlots function to build plots
     updatePlots(data, "Points");
