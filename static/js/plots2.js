@@ -21,7 +21,7 @@ function init() {
     // Build static-chart1
     var trace1 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.pts_year)],
+        y: [d3.sum(data.kobe.pts_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -42,7 +42,7 @@ function init() {
     // Build static-chart2
     var trace3 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.blk_year)],
+        y: [d3.sum(data.kobe.blk_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -63,7 +63,7 @@ function init() {
     // Build static-chart3
     var trace5 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.ast_year)],
+        y: [d3.sum(data.kobe.ast_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -84,7 +84,7 @@ function init() {
     // Build static-chart4
     var trace7 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.reb_year)],
+        y: [d3.sum(data.kobe.reb_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -105,7 +105,7 @@ function init() {
     // Build static-chart5
     var trace9 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.stl_year)],
+        y: [d3.sum(data.kobe.stl_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
@@ -126,7 +126,7 @@ function init() {
     // Build static-chart6
     var trace11 = {
         x: 'Kobe Bryant',
-        y: [d3.sum(data.kobe.dreb_year)],
+        y: [d3.sum(data.kobe.dreb_year.slice(1,20))],
         name: "Kobe Bryant",
         type: 'bar'
     };
