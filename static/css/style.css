@@ -91,7 +91,6 @@ button {
     /* text-justify:auto; */
 }
 
-#responsive-chart,
-#static-chart1 {
+#responsive-chart {
     height: 100%;
 }
