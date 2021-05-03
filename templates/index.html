@@ -16,23 +16,20 @@
       <h1><strong>KOBE VS LEBRON</strong></h1>
     </div>
     <div class=row>
-    <p class="main-text"><strong>Kobe Bryant and LeBron James are both considered NBA legends.</strong>They were both drafted out of high school and went on to win numerous championships 
-      for their respective teams. But did one live up to the high expectations placed on him more than the other? Below, you can see data on the two players' first 18 
-      years in the NBA. Compare the two players' overall stats per year and decide for yourself who is the stronger player.
-    </p>
-  </div>
+      <p class="main-text"><strong>Kobe Bryant and LeBron James are both considered NBA legends.</strong>They were both drafted out of high school and went on to win numerous championships 
+        for their respective teams. But did one live up to the high expectations placed on him more than the other? Below, you can see data on the two players' first 18 
+        years in the NBA. Compare the two players' overall stats per year and decide for yourself who is the stronger player.
+      </p>
+    </div>
     <div class="row">
       <div class="col-12">
         <div class="row box">
-          <div class="col-2" id="input">
+          <div class="col-2">
             <p class="search-text">Search by:</p>
-              <select id="selDataset" onchange="optionChanged(this.value)"></select>
-              <!-- Add dropdown element here -->
+              <select id="input" onchange="optionChanged(this.value)"></select>
             <p style="margin-top: 10px;">Choose a selection from the dropdown menu to compare the first 18 years of the players' career stats.</p>
           </div>
           <div class="col-10" id="responsive-chart">
-            <img class="chart" src="../static/Images/line_chart.PNG"/>
-            <!-- Add chart responsive to dropdown element here -->
           </div>
         </div>
       </div>
@@ -41,28 +38,41 @@
       <h2><strong>18-year Totals at a Glance</strong></h2>
     </div>
     <div class="row">
-      <div class="col-5 box" id="static-chart1">
+      <div class="col-5 box">
         <h4>Total Points</h4>
-        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
-        <!-- Add chart here -->
+        <!-- <img class="bar-chart" src="../static/Images/bar_chart.PNG"/> -->
+        <div id="static-chart1"></div>
       </div>
-      <div class="col-5 box" id="static-chart2">
-        <h4>Total Blocks</h4>
-        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
-        <!-- Add chart here -->
+      <div class="col-5 box">
+        <h4>Total Assists</h4>
+        <div id="static-chart2"></div>
       </div>
     </div>
     <div class="row" style="margin-top:10px;">
-      <div class="col-5 box" id="static-chart3">
-        <h4>Total Assists</h4>
-        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
-        <!-- Add chart here -->
+      <div class="col-5 box">
+        <h4>Total Rebounds</h4>
+        <div id="static-chart3"></div>
       </div>
-      <div class="col-5 box" id="static-chart4">
-        <h4>Total Wins</h4>
-        <img class="bar-chart" src="../static/Images/bar_chart.PNG"/>
-        <!-- Add chart here -->
+      <div class="col-5 box">
+        <h4>Total Blocks</h4>
+        <div id="static-chart4"></div>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-5 box">
+        <h4>Total Defensive Rebounds</h4>
+        <div id="static-chart5"></div>
+      </div>
+      <div class="col-5 box">
+        <h4>Total Steals</h4>
+        <div id="static-chart6"></div>
+      </div>
+    </div>
+    <script>
+      var data = {};
+      data = {{data|safe}};
+      console.log(data);
+    </script>
   </div>
 
   <footer class="footer fixed-bottom">
@@ -71,23 +81,12 @@
     </div>
   </footer> 
   
-    <!-- D3 -->  
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/plots.js"></script>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="../static/js/plots2.js"></script>
 
   </body>
 </html>

@@ -90,3 +90,7 @@ button {
     text-align: center;
     /* text-justify:auto; */
 }
+
+#responsive-chart {
+    height: 100%;
+}
