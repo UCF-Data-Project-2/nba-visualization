@@ -73,9 +73,16 @@ var layout = {
   xaxis: { title: "Year Index"}
   };
   
+<<<<<<< HEAD
 var chart1 = [trace1, trace2];
 
 console.log(data)
 
 Plotly.newPlot('interactive', chart1, layout);
 >>>>>>> 598533bd1646565cf83bc0b1efc1ffdbf8fe649a
+=======
+var data = [trace1, trace2;
+console.log(data.kobe.kb_pts_yr)
+Plotly.newPlot('myDiv', data);
+>>>>>>> d9769a4faffec7b94882ee5ca1333e7508d5ddde
+>>>>>>> f1ec073bbcfef90e70b28e646349210a842d1716
