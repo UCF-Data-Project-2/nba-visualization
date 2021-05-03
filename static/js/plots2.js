@@ -1,15 +1,18 @@
 // Function to format metadata for panel
 dropdown = ["Points", "Assists", "Rebounds", "Blocks", "Defensive Rebounds", "Steals"]
 
-function equalize(kobeArray) {
-
-}
-
 function init() {
+
+    // Utilizing new Javascript library to make the header ZOOM!
+    const header = document.querySelector('.header');
+    header.classList.add('animate__animated', 'animate__zoomIn');
+    header.style.setProperty('--animate-duration', '1s');
+
+
     d3.json("api/all").then(data => {
         console.log(data);
 
-    // Getting id from dropdown
+    // Getting input from dropdown
     let input = d3.select("#input");
     dropdown.forEach(element => {
         input.append("option").attr("value", element).text(element)
@@ -23,7 +26,6 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.pts_year.slice(0, 18))],
         name: "Kobe Bryant",
-        // marker: { color: 'rgb(66, 135, 245)' },
         type: 'bar'
     };
 
@@ -193,14 +195,12 @@ function init() {
 
     Plotly.newPlot('static-chart6', staticChart6, layout);
   
-
-
     // Call updatePlots function to build plots
     updatePlots(data, "Points");
     });
 };
 
-// Code to build plots
+// Code to build plot chosen in dropdown menu
 updatePlots = (data, input) => {
     console.log(data)
     console.log(input)
@@ -265,7 +265,7 @@ updatePlots = (data, input) => {
     Plotly.newPlot('responsive-chart', chart1, layout, config);
 
       
-// Function for handling new ID input from dropdown
+// Function for handling new input from dropdown
 optionChanged = (input) => {
     d3.json("api/all").then (data => {
         console.log(data);
