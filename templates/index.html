@@ -6,41 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>NBA Dashboard</title>
+
+  <!-- Link to new Javascript library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
   <div class="container">
+
+    <!-- Headline -->
     <div class="row">
-      <h1><strong>KOBE VS LEBRON</strong></h1>
+      <h1 class="header"><strong>KOBE VS LEBRON</strong></h1>
     </div>
+
+    <!-- Intro text -->
     <div class=row>
       <p class="main-text"><strong>Kobe Bryant and LeBron James are both considered NBA legends.</strong>They were both drafted out of high school and went on to win numerous championships 
         for their respective teams. But did one live up to the high expectations placed on him more than the other? Below, you can see data on the two players' first 18 
         years in the NBA. Compare the two players' overall stats per year and decide for yourself who is the stronger player.
       </p>
     </div>
+
+    <!-- Responsive chart section -->
     <div class="row">
       <div class="col-12">
         <div class="row box">
           <div class="col-2">
+
+            <!-- Dropdown section -->
             <p class="search-text">Search by:</p>
               <select id="input" onchange="optionChanged(this.value)"></select>
             <p style="margin-top: 10px;">Choose a selection from the dropdown menu to compare the first 18 years of the players' career stats.</p>
           </div>
+
+          <!-- Responsive chart goes here -->
           <div class="col-10" id="responsive-chart">
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Static chart section -->
     <div class="row">
+
+      <!-- Subhead -->
       <h2><strong>18-year Totals at a Glance</strong></h2>
     </div>
+
+    <!-- Row for static charts 1 & 2 -->
     <div class="row">
       <div class="col-5 box">
         <h4>Total Points</h4>
-        <!-- <img class="bar-chart" src="../static/Images/bar_chart.PNG"/> -->
         <div id="static-chart1"></div>
       </div>
       <div class="col-5 box">
@@ -48,6 +66,8 @@
         <div id="static-chart2"></div>
       </div>
     </div>
+
+    <!-- Row for static charts 3 & 4 -->
     <div class="row" style="margin-top:10px;">
       <div class="col-5 box">
         <h4>Total Rebounds</h4>
@@ -58,6 +78,8 @@
         <div id="static-chart4"></div>
       </div>
     </div>
+
+    <!-- Row for static charts 5 & 6 -->
     <div class="row">
       <div class="col-5 box">
         <h4>Total Defensive Rebounds</h4>
@@ -70,6 +92,7 @@
     </div>
   </div>
 
+  <!-- Footer with author info -->
   <footer class="footer fixed-bottom">
     <div class="container">
         <span class="foot-text">Visualizations by: <br> Ian Castro | Stephanie Rivas | Howard Mayorga | Kim Sommer</span>

@@ -1,3 +1,7 @@
+/************************/
+/* BACKGROUND AND FRAME */
+/************************/
+
 html {
     background-color: #320252;       
 }
@@ -18,10 +22,38 @@ body {
     background-size: 100% auto;
 }
 
-h1 {
+.row {
+    padding: 5px;
+    justify-content: center;
+}
+
+.box {
+    background-color: #fefefe;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.footer { 
+    margin-top: 2rem;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fefefe;
+    text-align: center;
+}
+
+/*****************/
+/* TEXT AND FONT */
+/*****************/
+
+h1 { 
     font-size: 6em;
     color: white;
-    filter: drop-shadow(2px 2px 1px black)
+    filter: drop-shadow(2px 2px 1px black);
 }
 
 h2 {
@@ -50,10 +82,9 @@ h2 {
     margin-right: 0px;
 }
 
-.row {
-    padding: 5px;
-    justify-content: center;
-}
+/***************/
+/* CHART STYLE */
+/***************/
 
 .bar-chart {
     max-width: 50% ;
@@ -61,34 +92,6 @@ h2 {
 
 .chart {
     max-width: 100%;
-    /* margin: 10px; */
-}
-
-.box {
-    background-color: #fefefe;
-    border-radius: 3px;
-    padding: 15px;
-    width: 100%;
-    margin-right: 20px;
-}
-
-button {
-    /* width: 100px; */
-    margin-right: 1em;
-}
-
-.footer { 
-    margin-top: 2rem;
-    position:relative;
-    bottom: 0;
-    width: 100%;
-    /* background-color: #fefefe;
-    opacity: .5; */
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fefefe;
-    text-align: center;
-    /* text-justify:auto; */
 }
 
 #responsive-chart {
