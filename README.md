@@ -35,4 +35,4 @@ __Rough Breakdown of Tasks:__
 
 ### Project Website Sketch
 
-![project sketch](Images/project_sketch.png)
+![project sketch](static/Images/project_sketch.png)
