@@ -7,7 +7,7 @@ __Members:__ Kim Sommer, Howard Mayorga, Stephanie Rivas & Ian Castro
 __How to run our app:__
 1. Open the directory of the repository and activate the Python environment PythonData.
 2. In the main folder run 'python app.py'
-3. Once the server is running click on the ling for the local server and the webpage will load and allow interaction with the visualization.
+3. Once the server is running click on the link for the local server and the webpage will load and allow interaction with the visualization.
 
 
 __Project Description and Outline:__ Kobe Bryant and LeBron James are both considered NBA legends. They were both drafted out of high school and went on to win numerous championships for their respective teams. But did one live up to the high expectations placed on him more than the other? We will examine this question by comparing the statistics from the two players' first twenty years in the league. We want to see whether either player improved from year one to year 20, who improved more and in what areas (i.e., points scord, rebounds, assists) and whose overall stats were more impressive. We'll create an interactive chart showing the two players' stats per year. The user will be able to select which stat to view, and the line chart will update for both players on the same plot area. The user will be able to see the trajectory of each player's stats per year starting with each player's respective first year. 
