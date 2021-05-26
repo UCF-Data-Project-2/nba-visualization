@@ -3,7 +3,10 @@
 /************************/
 
 html {
-    background-color: #320252;       
+    /* background-color: #320252;        */
+    background: linear-gradient(217deg, rgba(85, 37, 130,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(15, 58, 107,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(53, 3, 107,.8), rgba(0,0,255,0) 70.71%);
 }
 
 body {
@@ -15,11 +18,12 @@ body {
     margin: 0;
     font-family: Montserrat, sans-serif;
     line-height: 150%;
-    background: url(../../static/Images/nba-background-small.jpg) no-repeat center top fixed; 
+    background: transparent;
+    /* background: url(../../static/Images/nba-background-small.jpg) no-repeat center top fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100% auto;
+    background-size: 100% auto; */
 }
 
 .row {

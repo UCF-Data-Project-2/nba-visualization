@@ -20,6 +20,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.pts_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -27,6 +28,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.pts_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -49,6 +51,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.ast_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -56,6 +59,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.ast_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -78,6 +82,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.reb_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -85,6 +90,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.reb_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -107,6 +113,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.blk_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -114,6 +121,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.blk_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -136,6 +144,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.dreb_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -143,6 +152,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.dreb_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -165,6 +175,7 @@ function init() {
         x: 'Kobe Bryant',
         y: [d3.sum(data.kobe.stl_year.slice(0, 18))],
         name: "Kobe Bryant",
+        marker: {color: 'rgb(85, 37, 130)'},
         type: 'bar'
     };
 
@@ -172,6 +183,7 @@ function init() {
         x: 'LeBron James',
         y: [d3.sum(data.lebron.stl_year)],
         name: "LeBron James",
+        marker: {color: 'rgb(253 185 39)'},
         type: 'bar'
     };
 
@@ -233,6 +245,7 @@ updatePlots = (data, input) => {
         x: data.kobe.index_year,
         y: yKobe,
         name: "Kobe",
+        marker: {color: 'rgb(85, 37, 130)'},
         mode: 'lines+markers',
         type: 'scatter'
         };
@@ -240,6 +253,7 @@ updatePlots = (data, input) => {
         x: data.kobe.index_year,
         y: yLeBron,
         name: 'Lebron',
+        marker: {color: 'rgb(253 185 39)'},
         mode: 'lines+markers',
         type: 'scatter'
         };
